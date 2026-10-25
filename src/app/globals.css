@@ -1,0 +1,126 @@
+ @import "tailwindcss";
+
+:root {
+  --ivory: #F7F0E9;
+  --blush: #EBD7D1;
+  --warm-beige: #D4B6A7;
+  --brown: #875A48;
+  --dark-brown: #51372D;
+  --sage: #D8DCCB;
+  --text: #49352E;
+  --muted: #8E776B;
+  --line: rgba(135, 90, 72, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--text);
+  font-family: var(--font-body), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--brown);
+  outline-offset: 4px;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+.page-shell {
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.wedding-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 0 25px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--brown);
+  color: #fffaf6;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 220ms ease,
+    transform 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.wedding-button:hover {
+  background: var(--dark-brown);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(81, 55, 45, 0.16);
+}
+
+.wedding-button:active {
+  transform: translateY(0);
+}
+
+.photo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 250, 246, 0.7),
+      transparent 40%
+    ),
+    linear-gradient(
+      145deg,
+      #e6d0c5,
+      #f7eae2 55%,
+      #d9b9aa
+    );
+  color: var(--brown);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    width: calc(100% - 28px);
+  }
+
+  .wedding-button {
+    min-height: 46px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
