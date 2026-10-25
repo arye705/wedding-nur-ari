@@ -7,7 +7,7 @@ const MAPS_URL =
   "https://www.google.com/maps?q=-2.0319297313690186,119.2894515991211&z=17&hl=id";
 
 const VENUE_ADDRESS =
-  "Desa Tappilina, Kecamatan Topoyo, Kabupaten Mamuju Tengah, Sulawesi Barat 91464";
+  "Lorong Pinrang Desa Tappilina, Kecamatan Topoyo, Kabupaten Mamuju Tengah, Sulawesi Barat";
 
 const events = [
   {
